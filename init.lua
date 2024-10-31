@@ -12,7 +12,7 @@ local Config        = Json.decode(io.open("./bin/config.json", "r"):read("*all")
 
 local Client        = Discordia.Client()                                                    ; _G.Client       = Client
 
-local Logger        = require("./scripts/Logger.lua")                                       ; _G.Logger       = Logger
+local Logger        = require("./scripts/Util/Logger.lua")                                  ; _G.Logger       = Logger
 local Table         = require("./scripts/Util/Table.lua")                                   ; _G.Table        = Table
 local File          = require("./scripts/Util/File.lua")                                    ; _G.File         = File
 local Status        = require("./scripts/Status.lua")                                       ; _G.Status       = Status
