@@ -23,6 +23,7 @@ local DMCooldowns   = {}
 
 function IsExcempted(Message) 
     local LoadedData = DataStore.LoadData()
+    LoadedData.Excemptions = LoadedData.Excemptions or {Users = {}, Roles = {}, Channels = {}}
 
     for Role in Message.guild:getMember(Message.author.id).roles:iter() do 
         if Table.find(Config.Overrides.Roles, Role.id) or Table.find(LoadedData.Excemptions.Roles, Role.id) then 
