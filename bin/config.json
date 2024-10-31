@@ -1,0 +1,112 @@
+{
+    "Cooldown": 3,
+
+
+    "Overrides": {
+        "Roles": [
+            
+        ],
+
+        "Users": [
+
+        ],
+
+        "Channels": [
+
+        ]
+    },
+
+    "Admins" : [
+        "1273834392619585576"
+    ],
+
+    "Owners" : [
+        "1273834392619585576"
+    ],
+
+    "Commands": {
+        "RequestFAQ": {
+            "CommandPrefix"     : "!",
+            "Command"           : "faq", 
+            "Description"       : "Send the FAQ: If on a replied message, will reply to that message."
+        },
+        "ListCommands": {
+            "CommandPrefix"     : "!",
+            "Command"           : "cmds", 
+            "Description"       : "Send a list of commands to your DMs. Please make sure your DMs are open."
+        }, 
+        "ReferSupport": {
+            "CommandPrefix"     : "!",
+            "Command"           : "support",
+            "Description"       : "Get a link to the support server."
+        },
+        "ReferVersions": {
+            "CommandPrefix"     : "!",
+            "Command"           : "versions",
+            "Description"       : "Show where to find the versions"
+        }, 
+        "ReferACSV3": {
+            "CommandPrefix"     : "!",
+            "Command"           : "v3",
+            "Description"       : "Provide the FAQ section summary for ACS 3.0"
+        },
+        "ReferAnimation": {
+            "CommandPrefix"     : "!",
+            "Command"           : "animation",
+            "Description"       : "Give a user a help guide for animations"
+        },
+        "Ping": {
+            "CommandPrefix"     : "!",
+            "Command"           : "ping",
+            "Description"       : "Return the bot's ping to Discord"
+        },
+        "Excempt": {
+            "CommandPrefix"     : "!",
+            "Command"           : "excempt",
+            "Description"       : "Mention a channel, user, or role to add it to the excemption list.",
+            "IsAdminCommand"    : true
+        },
+        "Unexcempt": {
+            "CommandPrefix"     : "!",
+            "Command"           : "unexcempt",
+            "Description"       : "Mention a channel, user, or role to remove it from the excemption list.",
+            "IsAdminCommand"    : true
+        },
+        "ClearConsole": {
+            "CommandPrefix"     : "!",
+            "Command"           : "cls",
+            "Description"       : "Clear the bot's output",
+            "IsOwnerCommand"    : true
+        },
+        "RestartBot": {
+            "CommandPrefix"     : "!",
+            "Command"           : "restart",
+            "Description"       : "Restarts the bot",
+            "IsOwnerCommand"    : true
+        }
+    },
+
+    "Messages": {
+        "FAQ": "Please make sure to refer to our [FAQ](https://docs.google.com/document/d/1SolBn8Zl4sRr5UuFX0S5Gu2gWI_oNkUJt2ippgbHHac/edit?tab=t.0) before asking questions!", 
+        "FAQ_DM": "You can find this info at our [FAQ](https://docs.google.com/document/d/1SolBn8Zl4sRr5UuFX0S5Gu2gWI_oNkUJt2ippgbHHac/edit?tab=t.0)",
+        "RequestedFAQ": "[Here you go!](https://docs.google.com/document/d/1SolBn8Zl4sRr5UuFX0S5Gu2gWI_oNkUJt2ippgbHHac/edit?tab=t.0)",
+
+        "Support": "https://discord.gg/zjyP5nh4uE", 
+        "Support_DM": "https://discord.gg/zjyP5nh4uE", 
+
+        "Versions": "https://discord.com/channels/827005719454810173/827027317187674152",
+        "Versions_DM": "https://discord.com/channels/827005719454810173/827027317187674152",
+
+        "ACSV3": "Information about ACS 3.0, or whether there will BE an ACS 3.0 has not been disclosed. Anyone claiming to have ACS 3.0 is attempting to scam you. If there is not a 3.0 version in the official releases channel, then it does not exist.",
+        "ACSV3_DM": "Information about ACS 3.0, or whether there will BE an ACS 3.0 has not been disclosed. Anyone claiming to have ACS 3.0 is attempting to scam you. If there is not a 3.0 version in the official releases channel, then it does not exist.",
+
+        "Animations": "Please make sure to refer to our [FAQ](https://docs.google.com/document/d/1SolBn8Zl4sRr5UuFX0S5Gu2gWI_oNkUJt2ippgbHHac/edit?tab=t.0) before asking questions! We have a section at the bottom on animating.",
+        "Animations_DM": "Scroll to the bottom of our [FAQ](https://docs.google.com/document/d/1SolBn8Zl4sRr5UuFX0S5Gu2gWI_oNkUJt2ippgbHHac/edit?tab=t.0) and you'll find a section on animating!"
+    },
+
+
+    "DataChannel": {
+        "guild": "1299480369137192970",
+        "channel": "1299480447398449212"
+    }
+}

@@ -1,0 +1,22 @@
+[
+    [".*acs.*3%.0", null, "acs3"],
+    ["how.*development guild.*", null,"support"],
+    ["where.*appeal.*blacklist.*", null,"support"],
+    ["where.*request.*blacklist.*", null,"support"],
+    ["where.*buy.*sell.*", null,"support"],
+    ["how.*set.*acs.*"],
+	["how.*install.*acs.*"],
+    [".*where.*mods.*acs.*"],
+    [".*how.*add.*guns"], 
+    [".*where.*settings.*"],
+    [".*can.*hear.*shot"],
+    ["change.*time.*admin"],
+    [".*disable.*craters.*"], 
+    [".*remove.*leaning.*"],
+    [".*disable ui.*"], 
+    ["how.*animat.*", null,"animations"],
+    [".*disable.*seats.*"],
+	[".*convert.*keyframe.*", null,"animations"],
+	[".*convert.*animation.*", null,"animations"],
+	[".*convert.*keyframe.*", null,"animations"]
+]
