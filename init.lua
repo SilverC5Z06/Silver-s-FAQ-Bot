@@ -14,6 +14,8 @@ local Client        = Discordia.Client()                                        
 
 local Logger        = require("./scripts/Logger.lua")                                       ; _G.Logger       = Logger
 local Table         = require("./scripts/Table.lua")                                        ; _G.Table        = Table
+local File          = require("./scripts/File.lua")                                         ; _G.File         = File
+local Status        = require("./scripts/Status.lua")                                       ; _G.Status       = Status
 local DataStore     = require("./scripts/DataStore.lua")                                    ; _G.DataStore    = DataStore
 local Commands      = require("./scripts/Commands.lua")                                     ; _G.Commands     = Commands
 local Messages      = require("./scripts/Messages.lua")                                     ; _G.Messages     = Messages
