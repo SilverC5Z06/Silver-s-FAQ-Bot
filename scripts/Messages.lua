@@ -37,6 +37,7 @@ end
 
 
 Client:on("messageCreate", function(Message)
+    local Answered = false
     if (Message.author.id==Client.user.id) or (Message.guild and IsExcempted(Message)) then return end
 
     local Command, CanRun, IsAdmin = Commands:GetCommandFromMessage(Message)
@@ -47,9 +48,10 @@ Client:on("messageCreate", function(Message)
         end
         
 
-        if not CanRun then Message:reply({content = "Sorry, you can't run this command!", reference = {message = Message, mention = true}}) return end 
+        if not CanRun then Message:reply({content = "Sorry, you can't run this command!", reference = {message = Message, mention = true}}) Answered = true return end 
         
         Commands[Command](Message)
+        Answered = true
     end  
     
 
@@ -60,13 +62,15 @@ Client:on("messageCreate", function(Message)
 			
 			if CustomReference then Message:reply({content = Config.Messages[CustomReference], reference = {message = Message, mention = true}}) return end
 			
-            
+            Answered = true
             Commands[(CustomCommand or "AskedFAQ")](Message)
             return 
         end 
     end 
 
-    if Message.guild then Table.insert(Cooldowns, Message.author.id); Timer.sleep(2 * 1000) ; table.remove(Cooldowns, Table.find(Cooldowns, Message.author.id)) 
-    else Table.insert(DMCooldowns, Message.author.id); Timer.sleep(2 * 1000) ; table.remove(DMCooldowns, Table.find(Cooldowns, Message.author.id)) 
+    if (not Answered) and (not Message.guild) then Message:reply({content = Config.Messages.UnableToAnswer, reference = {message = Message, mention = true}}) return end
+
+    if Message.guild then Table.insert(Cooldowns, Message.author.id); Timer.sleep(1 * 1000) ; table.remove(Cooldowns, Table.find(Cooldowns, Message.author.id)) 
+    else Table.insert(DMCooldowns, Message.author.id); Timer.sleep(1 * 1000) ; table.remove(DMCooldowns, Table.find(Cooldowns, Message.author.id)) 
     end 
 end) 
