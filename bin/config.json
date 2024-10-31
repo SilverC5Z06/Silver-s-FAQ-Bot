@@ -76,13 +76,64 @@
             "CommandPrefix"     : "!",
             "Command"           : "cls",
             "Description"       : "Clear the bot's output",
-            "IsOwnerCommand"    : true
+            "IsOwnerCommand"    : true,
+            "Hidden"            : true
+        },
+        "GetConfig": {
+            "CommandPrefix"     : "!",
+            "Command"           : "getconfig",
+            "Description"       : "Get the config as a file",
+            "IsOwnerCommand"    : true,
+            "Hidden"            : true
+        },
+        "SetConfig": {
+            "CommandPrefix"     : "!",
+            "Command"           : "setconfig",
+            "Description"       : "Set the config to the attached file",
+            "IsOwnerCommand"    : true,
+            "Hidden"            : true
+        },
+        "GetQuestions": {
+            "CommandPrefix"     : "!",
+            "Command"           : "getquestions",
+            "Description"       : "Get the questions as a file",
+            "IsOwnerCommand"    : true,
+            "Hidden"            : true
+        },
+        "SetQuestions": {
+            "CommandPrefix"     : "!",
+            "Command"           : "setquestions",
+            "Description"       : "Set the questions to the attached file",
+            "IsOwnerCommand"    : true,
+            "Hidden"            : true
+        },
+        "SetStatus": {
+            "CommandPrefix"     : "!",
+            "Command"           : "setstatus",
+            "Description"       : "Set the bot status",
+            "IsOwnerCommand"    : true,
+            "Hidden"            : true
+        },
+        "ResetStatus": {
+            "CommandPrefix"     : "!",
+            "Command"           : "resetstatus",
+            "Description"       : "Reset the bot status",
+            "IsOwnerCommand"    : true,
+            "Hidden"            : true
+        },
+        "RemoveStatus": {
+            "CommandPrefix"     : "!",
+            "Command"           : "removestatus",
+            "Description"       : "Removes the bot status",
+            "IsOwnerCommand"    : true,
+            "Hidden"            : true
         },
         "RestartBot": {
             "CommandPrefix"     : "!",
             "Command"           : "restart",
             "Description"       : "Restarts the bot",
-            "IsOwnerCommand"    : true
+            "IsOwnerCommand"    : true,
+            "Hidden"            : true
         }
     },
 
@@ -104,6 +155,9 @@
         "Animations_DM": "Scroll to the bottom of our [FAQ](https://docs.google.com/document/d/1SolBn8Zl4sRr5UuFX0S5Gu2gWI_oNkUJt2ippgbHHac/edit?tab=t.0) and you'll find a section on animating!"
     },
 
+    "Status": {
+        "Message": "Don't be afraid to ask the bot questions!"
+    },
 
     "DataChannel": {
         "guild": "1299480369137192970",
