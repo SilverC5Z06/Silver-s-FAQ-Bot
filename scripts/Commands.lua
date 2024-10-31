@@ -4,6 +4,8 @@ local Module        = {}
 
 local DataStore     = _G.DataStore
 local Table         = _G.Table
+local Status        = _G.Status 
+local File          = _G.File 
 
 local Client        = _G.Client
 
@@ -63,8 +65,8 @@ function Module.ListCommands(Message)
     local FinalString = "# List of Commands\n" .. (function() 
         local CMDList="" 
         for _, CommandData in pairs(Config.Commands) do  
-            if CommandData.Hidden then goto continue end
-            CMDList = CMDList .. "``" .. CommandData.CommandPrefix .. CommandData.Command .. "`` :  " .. CommandData.Description  .. " " .. (((CommandData.IsAdminCommand and not CommandData.IsOwnerCommand) and "(Admins only)") or ((CommandData.IsOwnerCommand and not CommandData.IsOwnerCommand) and "(Owners only)") or "") .. "\n" 
+            if CommandData.Hidden and not (Table.find(Config.Owners, Message.author.id)) then goto continue end
+            CMDList = CMDList .. "``" .. CommandData.CommandPrefix .. CommandData.Command .. "`` :  " .. ((CommandData.Hidden and "*") or "") .. CommandData.Description  .. " " .. (((CommandData.IsAdminCommand and not CommandData.IsOwnerCommand) and "(Admins only)") or ((CommandData.IsOwnerCommand and not CommandData.IsOwnerCommand) and "(Owners only)") or "") .. ((CommandData.Hidden and "*") or "") .. "\n" 
             ::continue::
         end; return CMDList
     end)() .. "-# The bot has a cooldown of " .. tostring(Config.Cooldown) .." seconds per person"
@@ -173,12 +175,59 @@ function Module.Ping(Message)
 end
 
 function Module.ClearConsole(Message)
-   Message:reply({content = {"Clearing console..."}, reference = {message = Message, mention = true}})
+   local NewMessage = Message:reply({content = "Clearing console...", reference = {message = Message, mention = true}})
    os.execute("cls")
+   NewMessage:update({content = "Done!", reference = {message = Message, mention = true}})
+end
+
+function Module.GetConfig(Message)
+    File:ReplyFile(Message, "Here you go!", "./bin/config.json")
+end 
+
+function Module.GetQuestions(Message)
+    File:ReplyFile(Message, "Here you go!", "./bin/questions.json")
+end 
+
+function Module.SetConfig(Message)
+    local NewMessage = Message:reply({content = "Setting new config..", reference = {message = Message, mention = true}})
+    local Success, M = File:ReplaceJson(Message, "config.json")
+
+    if Success then 
+        NewMessage:update({content = "Done!", reference = {message = Message, mention = true}})
+    else 
+        NewMessage:update({content = M, reference = {message = Message, mention = true}})
+    end 
+end 
+
+function Module.SetQuestions(Message)
+    local NewMessage = Message:reply({content = "Setting new questions..", reference = {message = Message, mention = true}})
+    local Success, M = File:ReplaceJson(Message, "questions.json")
+    if Success then 
+        NewMessage:update({content = "Done!", reference = {message = Message, mention = true}})
+    else 
+        NewMessage:update({content = M, reference = {message = Message, mention = true}})
+    end 
+end 
+
+function Module.SetStatus(Message)
+    Status:SetStatus(Message)
+    Message:reply({content = "Done!", reference = {message = Message, mention = true}})
+end 
+
+function Module.ResetStatus(Message)
+    Status:SetStatus(Config.Status.Message)
+    Message:reply({content = "Done!", reference = {message = Message, mention = true}})
+end
+
+function Module.RemoveStatus(Message)
+    Status:RemoveStatus()
+    Message:reply({content = "Done!", reference = {message = Message, mention = true}})
 end
 
 function Module.RestartBot(Message)
     _G:Restart(Message.channel)
- end
+end
+
+
 
 return Module
