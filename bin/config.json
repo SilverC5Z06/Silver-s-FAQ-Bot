@@ -153,6 +153,8 @@
 
         "Animations": "Please make sure to refer to our [FAQ](https://docs.google.com/document/d/1SolBn8Zl4sRr5UuFX0S5Gu2gWI_oNkUJt2ippgbHHac/edit?tab=t.0) before asking questions! We have a section at the bottom on animating.",
         "Animations_DM": "Scroll to the bottom of our [FAQ](https://docs.google.com/document/d/1SolBn8Zl4sRr5UuFX0S5Gu2gWI_oNkUJt2ippgbHHac/edit?tab=t.0) and you'll find a section on animating!"
+   
+        "UnableToAnswer": "I'm sorry, I didn't detect any keywords off that question 😢\n\nTry rephrasing the question, referring to our [FAQ](https://docs.google.com/document/d/1SolBn8Zl4sRr5UuFX0S5Gu2gWI_oNkUJt2ippgbHHac/edit?tab=t.0), or asking for help in the server!"
     },
 
     "Status": {
