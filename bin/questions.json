@@ -1,9 +1,8 @@
 [
-    [".*acs.*3%.0", null, "acs3"],
-    ["how.*development guild.*", null,"support"],
-    ["where.*appeal.*blacklist.*", null,"support"],
-    ["where.*request.*blacklist.*", null,"support"],
-    ["where.*buy.*sell.*", null,"support"],
+    [".*acs.*3%.0", null, "ACSV3"],
+    ["how.*development guild.*", null,"Support"],
+    ["where.*appeal.*blacklist.*", null,"Support"],
+    ["where.*request.*blacklist.*", null,"Support"],
     ["how.*set.*acs.*"],
 	["how.*install.*acs.*"],
     [".*where.*mods.*acs.*"],
@@ -14,9 +13,9 @@
     [".*disable.*craters.*"], 
     [".*remove.*leaning.*"],
     [".*disable ui.*"], 
-    ["how.*animat.*", null,"animations"],
+    ["how.*animat.*", null,"Animations"],
     [".*disable.*seats.*"],
-	[".*convert.*keyframe.*", null,"animations"],
-	[".*convert.*animation.*", null,"animations"],
-	[".*convert.*keyframe.*", null,"animations"]
+	[".*convert.*keyframe.*", null,"Animations"],
+	[".*convert.*animation.*", null,"Animations"],
+	[".*convert.*keyframe.*", null,"Animations"]
 ]
