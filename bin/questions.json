@@ -17,5 +17,6 @@
     [".*disable.*seats.*"],
 	[".*convert.*keyframe.*", null,"Animations"],
 	[".*convert.*animation.*", null,"Animations"],
-	[".*convert.*keyframe.*", null,"Animations"]
+	[".*convert.*keyframe.*", null,"Animations"],
+    [".*where.*get acs.*", null, "Versions"]
 ]
