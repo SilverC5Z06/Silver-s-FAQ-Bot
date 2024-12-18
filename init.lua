@@ -25,7 +25,7 @@ local DebugMode     = false
 function _G:Restart(Channel)
     Logger:Log(2, "Restart pending...")
     Channel:send("Restarting...")
-
+    Channel:send("Done!")
     os.execute("luvit ./init.lua")
 end
 
