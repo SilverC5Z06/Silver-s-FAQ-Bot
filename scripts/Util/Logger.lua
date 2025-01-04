@@ -73,7 +73,7 @@ Stdout:write(string.format('\27[%i;%im%s\27[0m', 1, 95, -- 91 is color
  @@@@@@    @@@@@@@   @@@@@@             Name        :       Silver's FAQ BOT                                                <
 @@@@@@@@  @@@@@@@@  @@@@@@@             Version     :       3.0.8                                                           <
 @@!  @@@  !@@       !@@                 Created     :       10/31/24                                                        <
-!@!  @!@  !@!       !@!                 Modified    :       10/31/24                                                        <
+!@!  @!@  !@!       !@!                 Modified    :       1/4/25                                                        <
 @!@!@!@!  !@!       !!@@!!              Language    :       Lua 5.4                                                         <
 !!!@!!!!  !!!        !!@!!!                                                                                                 <
 !!:  !!!  :!!            !:!            Contacts    :       silverc5z06@gmail.com, @silverc5z06                             <

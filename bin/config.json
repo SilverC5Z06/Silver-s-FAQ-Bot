@@ -134,7 +134,14 @@
             "Description"       : "Restarts the bot",
             "IsOwnerCommand"    : true,
             "Hidden"            : true
-        }
+        }, 
+        "Blacklist": {
+            "CommandPrefix"     : "!",
+            "Command"           : "blacklist",
+            "Description"       : "Blacklists the user. (ex: \"!blacklist A, SilverC5Z06, 1273834392619585576, https://www.roblox.com/users/5585470028/profile\") - Must be formatted in order with commas and spaces between params.", 
+            "Hidden"            : true,
+            "IsAdminCommand"    : true
+        }, 
     },
 
     "Messages": {
@@ -148,8 +155,9 @@
         "Versions": "<#827046831153610753>",
         "Versions_DM": "<#827046831153610753>",
 
-        "ACSV3": "Information about ACS 3.0, or whether there will BE an ACS 3.0 has not been disclosed. Anyone claiming to have ACS 3.0 is attempting to scam you. If there is not a 3.0 version in the official releases channel, then it does not exist.",
-        "ACSV3_DM": "Information about ACS 3.0, or whether there will BE an ACS 3.0 has not been disclosed. Anyone claiming to have ACS 3.0 is attempting to scam you. If there is not a 3.0 version in the official releases channel, then it does not exist.",
+
+        "ACSV3": "Information about ACS 3.0 is still in development, although has been announnced by our developers. Until you find a version 3.0 in <#827027317187674152>, ACS 3.0 has not been released and anyone claiming to have it is scamming you.",
+        "ACSV3_DM": "Information about ACS 3.0 is still in development, although has been announnced by our developers. Until you find a version 3.0 in <#827027317187674152>, ACS 3.0 has not been released and anyone claiming to have it is scamming you.",
 
         "Animations": "Please make sure to refer to our [FAQ](https://docs.google.com/document/d/1SolBn8Zl4sRr5UuFX0S5Gu2gWI_oNkUJt2ippgbHHac/edit?tab=t.0) before asking questions! We have a section at the bottom on animating.",
         "Animations_DM": "Scroll to the bottom of our [FAQ](https://docs.google.com/document/d/1SolBn8Zl4sRr5UuFX0S5Gu2gWI_oNkUJt2ippgbHHac/edit?tab=t.0) and you'll find a section on animating!",
@@ -164,5 +172,10 @@
     "DataChannel": {
         "guild": "1299480369137192970",
         "channel": "1299480447398449212"
+    },
+
+    "BlacklistChannel" : {
+        "guild": "827005719454810173",
+        "channel": "827046831153610753"
     }
 }

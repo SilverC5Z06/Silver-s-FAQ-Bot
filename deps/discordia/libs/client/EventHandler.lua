@@ -324,7 +324,7 @@ function EventHandler.MESSAGE_CREATE(d, client)
 	local channel = getChannel(client, d)
 	if not channel then return warning(client, 'TextChannel', d.channel_id, 'MESSAGE_CREATE') end
 	local message = channel._messages:_insert(d)
-	return client:emit('messageCreate', message)
+	return client:emit('messageCreate', message, d)
 end
 
 function EventHandler.MESSAGE_UPDATE(d, client) -- may not contain the whole message

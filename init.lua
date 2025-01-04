@@ -35,9 +35,18 @@ if not DebugMode then
         Client:run("Bot " .. io.open("./bin/token.txt", "r"):read("*all"))
     end); if not S then 
         
-        Client:getUser(Config.Owners[1]):send("**SILVER'S FAQ BOT ERROR**\n Hey Silver, Your bot, Silver's FAQ BOT, had an error at " .. os.date("%Y-%m-%d %H:%M:%S") .. ". We'll try to restart it.\nError: ```lua\n" .. E .. "\n```")
+        Client:getUser(Config.Owners[1]):send("**SILVER'S FAQ BOT ERROR**\n Hey Silver, Your bot, **Silver's FAQ BOT**, had an error at " .. os.date("%Y-%m-%d %H:%M:%S") .. ". We'll try to restart it.\nError: ```lua\n" .. E .. "\n```")
         _G:Restart(Client:getUser(Config.Owners[1])) 
     end 
 else 
     Client:run("Bot " .. io.open("./bin/token.txt", "r"):read("*all"))
 end 
+
+
+
+--[[ 
+https://discord.com/developers/applications
+1299443334300831794
+
+
+]]

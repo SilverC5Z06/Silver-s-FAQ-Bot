@@ -37,8 +37,10 @@ function IsExcempted(Message)
 end 
 
 
-Client:on("messageCreate", function(Message)
-    local Answered = false
+
+function Module.HandleMessage(Message, Raw)
+
+	local Answered = false
     if (Message.author.id==Client.user.id) or (Message.guild and IsExcempted(Message)) then return end
 
     local Command, CanRun, IsAdmin = Commands:GetCommandFromMessage(Message)
@@ -54,15 +56,13 @@ Client:on("messageCreate", function(Message)
         Commands[Command](Message)
         Answered = true
     end  
-    
 
     for _, Question in pairs(Questions) do 
         if string.match(Message.content:lower(), Question[1]) then 
 			local CustomCommand 	= Question[2] 
 			local CustomReference	= Question[3]
 			
-			if CustomReference then Message:reply({content = Config.Messages[CustomReference], reference = {message = Message, mention = true}}) return end
-			
+			if CustomReference then Message:reply({content = (Config.Messages[CustomReference] or "uhh...."), reference = {message = Message, mention = true}}) return end
             Answered = true
             Commands[(CustomCommand or "AskedFAQ")](Message)
             return 
@@ -74,10 +74,14 @@ Client:on("messageCreate", function(Message)
     if Message.guild then Table.insert(Cooldowns, Message.author.id); Timer.sleep(1 * 1000) ; table.remove(Cooldowns, Table.find(Cooldowns, Message.author.id)) 
     else Table.insert(DMCooldowns, Message.author.id); Timer.sleep(1 * 1000) ; table.remove(DMCooldowns, Table.find(Cooldowns, Message.author.id)) 
     end 
-end) 
+end
+
+Client:on("messageCreate", Module.HandleMessage)
 
 
 
 
 
 Logger:Log(0, "Recieved scripts/Messages.lua        : OK", {Text = "MODULES", Color = Logger.Colors.BrightBlue})
+
+return Module

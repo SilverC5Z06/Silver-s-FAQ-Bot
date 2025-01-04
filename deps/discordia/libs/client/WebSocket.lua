@@ -33,7 +33,6 @@ function WebSocket:__init(parent)
 end
 
 function WebSocket:connect(url, path)
-
 	local success, res, read, write = pcall(connect, url, path)
 
 	if success then

@@ -100,21 +100,28 @@ end
 
 function Shard:handlePayload(payload)
 
-	local client = self._client
-
 	local s = payload.s
 	local t = payload.t
 	local d = payload.d
 	local op = payload.op
 
+	local client = self._client
+
+	--[[
+	local s = payload.s
+	local t = payload.t
+	local d = payload.d
+	local op = payload.op
+]]
 	if t ~= null then
 		self:debug('WebSocket OP %s : %s : %s', op, t, s)
 	else
 		self:debug('WebSocket OP %s', op)
 	end
 
-	if op == DISPATCH then
+	
 
+	if op == DISPATCH then
 		self._seq = s
 		if not ignore[t] then
 			EventHandler[t](d, client, self)
